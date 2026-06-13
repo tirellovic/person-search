@@ -1,3 +1,12 @@
+from pathlib import Path
+from typing import Tuple, List, Optional
+import copy
+import scipy.io
+import numpy as np
+import torch
+import torch.nn as nn
+from PIL import Image, ImageDraw, ImageFont
+
 def parse_annotations_file(
         path_to_file: Path
     ) -> Tuple[List[str], List[List[float]]]:
